@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sign up</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="sign-up.css" />
+        <script src="main.js"></script>
+</head>
+
+<body>
+        <div class="container">
+                <h1>Create a new account</h1>
+                <a href="../index.html">or Log in</a>
+                <form action="../home/home.html">
+                        <label for="first-name" class="label-text">First name</label>
+                        <input type="text" id="first-name" placeholder="e.g., Mark">
+                        <label for="last-name" class="label-text">Last name</label>
+                        <input type="text" id="last-name" placeholder="e.g., Green">
+                        <label for="email" class="label-text">Email</label>
+                        <input type="text" id="email" placeholder="e.g., me@example.com">
+                        <label for="password" class="label-text">Password</label>
+                        <input type="text" id="password" placeholder="e.g., **********">
+                        <label for="mobile" class="label-text">Mobile number</label>
+                        <input type="number" id="mobile" placeholder="e.g., 9988776655">
+                        <button type="submit" onclicke="signup()" class="signin-btn">Sign up</button>
+                </form>
+        </div>
+</body>
+
+</html>

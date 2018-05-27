@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    padding: 1%;
+    color: #fff;
+    background-color: #186CA3;
+}
+
+
+.container {
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.header-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-link:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
