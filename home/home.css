@@ -12,6 +12,8 @@
     border-radius: 5px;
     width: 30%;
     margin: 10px 0;
+    display: inline-table;
+    cursor: pointer;
 }
 
 .add-project-btn {
@@ -24,4 +26,11 @@
     outline: none;
     float: right;
     background-color: forestgreen;
+}
+
+.task-meta {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
 }

@@ -11,14 +11,12 @@ header {
     background-color: #186CA3;
 }
 
-
 .container {
     display: flex;
     padding: 1%;
     flex-direction: column;
     justify-content: center;
 }
-
 
 .header-link {
     text-decoration: none;
@@ -30,3 +28,6 @@ header {
     color: #fff;
 }
 
+input {
+    outline: none;
+}

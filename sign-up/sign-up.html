@@ -7,27 +7,29 @@
         <title>Sign up</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="sign-up.css" />
-        <script src="main.js"></script>
 </head>
 
 <body>
         <div class="container">
-                <h1>Create a new account</h1>
-                <a href="../index.html">or Log in</a>
+                <h1 style="text-align: center;">Sign up
+                        <a href="../index.html"> or Log in</a>
+                </h1>
+
                 <form action="../home/home.html">
                         <label for="first-name" class="label-text">First name</label>
-                        <input type="text" id="first-name" placeholder="e.g., Mark">
+                        <input type="text" id="first-name" placeholder="e.g., Mark" required>
                         <label for="last-name" class="label-text">Last name</label>
-                        <input type="text" id="last-name" placeholder="e.g., Green">
+                        <input type="text" id="last-name" placeholder="e.g., Green" required>
                         <label for="email" class="label-text">Email</label>
-                        <input type="text" id="email" placeholder="e.g., me@example.com">
+                        <input type="email" id="email" placeholder="e.g., me@example.com" required>
                         <label for="password" class="label-text">Password</label>
-                        <input type="text" id="password" placeholder="e.g., **********">
+                        <input type="password" id="password" placeholder="e.g., **********" required>
                         <label for="mobile" class="label-text">Mobile number</label>
-                        <input type="number" id="mobile" placeholder="e.g., 9988776655">
-                        <button type="submit" onclicke="signup()" class="signin-btn">Sign up</button>
+                        <input type="tel" id="mobile" placeholder="e.g., 9988776655" required>
+                        <button type="submit" onclick="signup()" class="signin-btn">Sign up</button>
                 </form>
         </div>
+        <script src="main.js"></script>
 </body>
 
 </html>

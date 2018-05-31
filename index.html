@@ -12,14 +12,14 @@
 
 <body>
     <div class="container">
-        <h1>Log in
+        <h1 style="text-align: center;">Log in
             <a href="sign-up/sign-up.html">or Sign up</a>
         </h1>
         <form action="./home/home.html" id="login-form" name="LoginForm">
             <label for="name" class="label-text">Username</label>
-            <input type="text" id="name" placeholder="me@example.com">
+            <input type="text" id="name" placeholder="me@example.com" required>
             <label for="password" class="label-text">Password</label>
-            <input type="text" id="password" placeholder="e.g., **********">
+            <input type="password" id="password" placeholder="e.g., **********" required>
             <button type="submit" onClick="login()" class="login-btn">Login</button>
         </form>
     </div>
