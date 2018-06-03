@@ -23,26 +23,42 @@
                 <h4>Board name: Lorem ipsum</h4>
                 <p>Project name: Lorem ipsum</p>
                 <div class="task-card">
-                    <form action="../home/home.html" class="row justify-content-around">
-                        <div class="col align-self-center">
-                            <label for="taskName" class="label-text">Task name</label>
-                            <input type="text" id="taskName" placeholder="Name of the task" required>
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="taskName">Task name</label>
+                                <input type="email" class="form-control" id="taskName" aria-describedby="emailHelp" placeholder="Enter task name">
+                            </div>
+                            <div class="col">
+                                <label for="assignee">Assignee</label>
+                                <select class="custom-select" id="assignee">
+                                    <option selected>Selct one assignee</option>
+                                    <option value="1">Mark</option>
+                                    <option value="2">Theo</option>
+                                    <option value="3">Judy</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col align-self-center">
-                            <label for="startDate" class="label-text">Start date</label>
-                            <input type="date" id="startDate" placeholder="dd/mm/yy" required>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="startDate" class="label-text">Start date</label>
+                                <input type="date" class="form-control" id="startDate" required>
+                            </div>
+                            <div class="col">
+                                <label for="endDate" class="label-text">End date</label>
+                                <input type="date" class="form-control" id="endDate" placeholder="dd/mm/yy" required>
+                            </div>
                         </div>
-                        <div class="col align-self-center">
-                            <label for="endDate" class="label-text">End date</label>
-                            <input type="date" id="endDate" placeholder="dd/mm/yy" required>
+                        <br />
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+                                <label class="form-check-label">
+                                    Task completed
+                                </label>
+                            </div>
                         </div>
-                        <div class="col align-self-center">
-                            <label for="isCompleted" class="label-text">Completed</label>
-                            <input type='checkbox' id="isCompleted" value='" + taskName + "'>
-                        </div>
-                        <div class="col align-self-center">
-                            <button type="submit" onclicke="saveTask()" class="create-task-btn">Add</button>
-                        </div>
+                        <button type="submit" class="btn create-task-btn">Add task</button>
                     </form>
                 </div>
                 <div id="add-task">
@@ -99,6 +115,12 @@
         </div>
     </div>
     <script src="task.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

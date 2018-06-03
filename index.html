@@ -15,12 +15,12 @@
         <h1 style="text-align: center;">Log in
             <a href="sign-up/sign-up.html">or Sign up</a>
         </h1>
-        <form action="./home/home.html" id="login-form" name="LoginForm">
-            <label for="name" class="label-text">Username</label>
-            <input type="text" id="name" placeholder="me@example.com" required>
+        <form id="login-form" name="LoginForm">
+            <label for="username" class="label-text">Username</label>
+            <input type="text" id="username" placeholder="me@example.com" required>
             <label for="password" class="label-text">Password</label>
             <input type="password" id="password" placeholder="e.g., **********" required>
-            <button type="submit" onClick="login()" class="login-btn">Login</button>
+            <button type="submit" onClick="login(username, password)" class="login-btn">Login</button>
         </form>
     </div>
     <script src="index.js"></script>
