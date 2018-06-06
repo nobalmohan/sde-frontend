@@ -23,7 +23,6 @@ function sendRequest(e) {
 }
 
 
-//go to task page from home page
 function gotoHome() {
     window.location.href = "../home/home.html"
 }

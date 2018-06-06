@@ -1,18 +1,13 @@
-//List of projects
-var boardList = [
-  {
+var boardList = [{
     name: "Board one",
     id: "213",
-    list: [
-      {
+    list: [{
         name: "Project Two",
         id: "B1P2",
-        taskList: [
-          {
-            name: "task one",
-            id: "12er45"
-          }
-        ]
+        taskList: [{
+          name: "task one",
+          id: "12er45"
+        }]
       },
       {
         name: "Project Three",
@@ -21,8 +16,7 @@ var boardList = [
       {
         name: "Project Four",
         id: "B1P4",
-        taskList: [
-          {
+        taskList: [{
             name: "task one",
             id: "12er45"
           },
@@ -37,12 +31,10 @@ var boardList = [
   {
     name: "Board two",
     id: "456",
-    list: [
-      {
+    list: [{
         name: "Project One",
         id: "B2P1",
-        taskList: [
-          {
+        taskList: [{
             name: "task one",
             id: "12er45"
           },
@@ -59,8 +51,7 @@ var boardList = [
       {
         name: "Project Three",
         id: "B2P3",
-        taskList: [
-          {
+        taskList: [{
             name: "task one",
             id: "12er45"
           },
@@ -74,14 +65,12 @@ var boardList = [
   }
 ];
 
-//initial load
 loadMenuList();
 
-//show the list of boards + projects
 function showProjects(showBroadID) {
   var projectBlock = document.getElementById("projects-list");
   projectBlock.innerHTML = "";
-  boardList.forEach(function(value, index) {
+  boardList.forEach(function (value, index) {
     var PID = "project_" + value.id;
     var BID = "board_" + value.id;
     if (value.id == showBroadID) {
@@ -102,7 +91,7 @@ function showProjects(showBroadID) {
 
 function showCards(id, cardList, boardIndex) {
   var cardBlock = document.getElementById(id);
-  cardList.forEach(function(card, index) {
+  cardList.forEach(function (card, index) {
     var backgroundColor = "grey";
     //var backgroundColor = randomBGColor();
     var taskID = "card_" + boardIndex + "_" + index;
@@ -115,7 +104,7 @@ function showCards(id, cardList, boardIndex) {
       card.name +
       "</h4>";
     if (card.taskList != undefined) {
-      card.taskList.forEach(function(task) {
+      card.taskList.forEach(function (task) {
         document.getElementById(taskID).innerHTML +=
           "<p class='task-meta'>" + task.name + "</p>";
       });
@@ -135,31 +124,25 @@ function addProject(id, event) {
 }
 
 function newBoard(element) {
-  //Check if the input text is less than of length 5
   if (element.value.length < 5) {
     alert("Board name can't be less than five characters!");
     return;
   } else {
     var newBoardId = getRandomNumber();
-    //push a new entry to the list
     boardList.push({
       name: element.value,
       id: newBoardId,
       list: []
     });
-    //calling it again to refresh the list
     showProjects(newBoardId);
-    //Update the menus
     loadMenuList();
     alert("Board name" + element.value + " added!");
   }
 }
 
 function removeBoard(board) {
-  //remove nodes
   document.getElementById(board.id).remove();
-  //remove entry from the list
-  boardList.forEach(function(value, index) {
+  boardList.forEach(function (value, index) {
     console.log(value);
   });
 }
@@ -167,7 +150,7 @@ function removeBoard(board) {
 function loadMenuList(params) {
   var menuList = document.getElementById("menuList");
   menuList.innerHTML = "";
-  boardList.forEach(function(value, index) {
+  boardList.forEach(function (value, index) {
     menuList.innerHTML +=
       "<li onclick=showBoard('" + value.id + "')>" + value.name + "</li>";
   });
@@ -177,12 +160,10 @@ function showBoard(id) {
   showProjects(id);
 }
 
-//generate random number for ID
 function getRandomNumber() {
   return Math.floor(Math.random() * 10000);
 }
 
-//generate random color. Can be used for project card
 function randomBGColor() {
   var x = Math.floor(Math.random() * 256);
   var y = Math.floor(Math.random() * 256);
@@ -190,12 +171,10 @@ function randomBGColor() {
   return "rgb(" + x + "," + y + "," + z + ")";
 }
 
-//go to task page from home page
 function gotoCard() {
-  window.location.href = "../task/task.html";
+  window.location.href = "../html/task.html";
 }
 
-//toggle menu bar
 function toggleMenu() {
   var sideMenuID = document.getElementById("sideMenu");
   sideMenuID.style.display = sideMenuID.style.display === "none" ? "" : "none";
