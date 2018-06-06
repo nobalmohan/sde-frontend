@@ -14,15 +14,23 @@
 
 <body>
     <header>
+        <span id="nav-toggle" href="#" onClick="toggleMenu()">&#9776;</span>
         <a class="header-link" href="#">Project Management App</a>
     </header>
-    <div class="container">
-        <section class="row">
-            <input type="text" name="New board" class="col-8 board-input " id="boardName" placeholder="e.g., new test board">
-            <button onClick="newBoard(boardName)" class="col-1 add-board-btn">Add</button>
-        </section>
-        <br />
-        <section id="projects-list"></section>
+    <div class="home-container">
+        <div id="sideMenu">
+            <ul id="menuList">
+                <li></li>
+            </ul>
+        </div>
+        <div class="board-container">
+            <section class="row">
+                <input type="text" name="New board" class="col-8 board-input " id="boardName" placeholder="e.g., new test board">
+                <button onClick="newBoard(boardName)" class="col-1 add-board-btn">Add</button>
+            </section>
+            <br />
+            <section id="projects-list"></section>
+        </div>
     </div>
     <script src="home.js"></script>
 </body>

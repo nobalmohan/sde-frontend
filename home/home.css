@@ -56,3 +56,28 @@
     padding: 8px;
     border-radius: 5px;
 }
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.board-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1% 0;
+}
+
+#sideMenu {
+    background-color: grey;
+    color: #fff;
+    width: 15%;
+    height: 100vh;
+    padding: 10px 20px;
+}
+
+#menuList {
+    list-style: none;
+    padding: 0;
+}
