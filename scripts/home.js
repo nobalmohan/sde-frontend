@@ -81,7 +81,7 @@ function showProjects(showBroadID) {
         value.name +
         "<span class='remove-board' onclick='removeBoard(" +
         BID +
-        ")'>Remove</span></div><div class='card-container' id='" +
+        ")'>Remove Board</span></div><div class='card-container' id='" +
         PID +
         "'> </div></div>";
       showCards(PID, value.list, index);
@@ -136,7 +136,7 @@ function newBoard(element) {
     });
     showProjects(newBoardId);
     loadMenuList();
-    alert("Board name" + element.value + " added!");
+    alert("Board name " + element.value + " added!");
   }
 }
 
