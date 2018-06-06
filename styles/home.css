@@ -64,7 +64,7 @@
 }
 
 .board-container {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     padding: 1% 0;
 }
@@ -78,7 +78,7 @@
 #sideMenu {
     background-color: grey;
     color: #fff;
-    width: 15%;
+    width: 20%;
     height: 100vh;
 }
 
