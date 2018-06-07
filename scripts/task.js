@@ -1,30 +1,31 @@
 var TaskList = [{
     name: "Lorem ipsum",
-    id: "213",
+    id: "8783",
     assignee: "Mark",
-    startDate: "28/05/2018",
-    endDate: "28/05/2018",
+    startDate: "2017-06-01",
+    endDate: "2018-05-28",
     isCompleted: false
 }, {
     name: "Lorem ipsum two",
-    id: "213",
+    id: "21344",
     assignee: "Judy",
-    startDate: "28/05/2018",
-    endDate: "28/05/2018",
+    startDate: "2017-06-01",
+    endDate: "2018-05-28",
     isCompleted: false
 }];
 
 showTask();
 
+
 function showTask() {
     var taskBlock = document.getElementById("task-list-block");
-    //taskBlock.innerHTML = "";
+    taskBlock.innerHTML = "";
     TaskList.forEach(function (value, index) {
-        var TID = "task_" + value.id;
-        taskBlock.innerHTML += "<section id=" + TID + " class='task-card'><div class='row justify-content-around'>" +
+        console.log(value);
+        taskBlock.innerHTML += "<section id=" + value.id + " class='task-card'><div class='row justify-content-around'>" +
             "<div class='col align-self-center'> " +
             "<label class='label-text'>Task name</label>" +
-            "<div class='task-meta'>Lorem ipsum</div>" +
+            "<div class='task-meta'>" + value.name + "</div>" +
             "</div>" +
             "<div class='col align-self-center'>" +
             "<label class='label-text'>Start date</label>" +
@@ -39,16 +40,44 @@ function showTask() {
             "<div class='task-meta'>Yes</div>" +
             "</div>" +
             "<div class='col align-self-center'>" +
-            "<button onclick=deleteTask('" + TID + "') class='delete-task-btn'> Delete </button>" +
+            "<button onclick=editTask('" + value.id + "') class='edit-task-btn'> Edit </button>" +
+            "</div>" +
+            "<div class='col align-self-center'>" +
+            "<button onclick=deleteTask('" + value.id + "') class='delete-task-btn'> Delete </button>" +
             "</div>" +
             "</div></section>";
     });
 }
 
-function saveTask() {
 
+
+function saveTask() {
+    TaskList.push({
+        name: "Lorem ipsum two",
+        id: getRandomNumber(),
+        assignee: "Judy",
+        startDate: "28-05-2018",
+        endDate: "28-05-2018",
+        isCompleted: false
+    });
+    showTask();
 }
+
 
 function deleteTask(id) {
     document.getElementById(id).remove();
+}
+
+function editTask(id) {
+    TaskList.forEach(function (value, index) {
+        if (value.id == id) {
+            document.getElementById('taskName').value = value.name;
+            document.getElementById('startDate').value = value.startDate;
+            document.getElementById('endDate').value = value.endDate;
+        }
+    });
+}
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * 10000);
 }

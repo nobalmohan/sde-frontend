@@ -72,7 +72,7 @@ function showProjects(showBroadID) {
   projectBlock.innerHTML = "";
   boardList.forEach(function (value, index) {
     var PID = "project_" + value.id;
-    var BID = "board_" + value.id;
+    var BID = value.id;
     if (value.id == showBroadID) {
       projectBlock.innerHTML +=
         "<div class='board-block' id='" +
@@ -141,9 +141,12 @@ function newBoard(element) {
 }
 
 function removeBoard(board) {
-  document.getElementById(board.id).remove();
+  document.getElementById(board).remove();
   boardList.forEach(function (value, index) {
-    console.log(value);
+    if (value.id == board) {
+      delete boardList[index];
+      loadMenuList();
+    }
   });
 }
 

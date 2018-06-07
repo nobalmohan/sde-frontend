@@ -23,7 +23,7 @@
                 <h4>Board name: Lorem ipsum</h4>
                 <p>Project name: Lorem ipsum</p>
                 <div class="task-card">
-                    <form>
+                    <form id="task-form" name="TaskEditForm" onsubmit="saveTask();">
                         <div class="form-row">
                             <div class="col">
                                 <label for="taskName">Task name</label>
@@ -42,17 +42,17 @@
                         <div class="form-row">
                             <div class="col">
                                 <label for="startDate" class="label-text">Start date</label>
-                                <input type="date" class="form-control" id="startDate" required>
+                                <input type="date" class="form-control" id="startDate" required value="28-05-2018">
                             </div>
                             <div class="col">
                                 <label for="endDate" class="label-text">End date</label>
-                                <input type="date" class="form-control" id="endDate" placeholder="dd/mm/yy" required>
+                                <input type="date" class="form-control" id="endDate" value="28-05-2018" required>
                             </div>
                         </div>
                         <br />
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+                                <input class="form-check-input" type="checkbox" value="" id="isTaskComplete">
                                 <label class="form-check-label">
                                     Task completed
                                 </label>
