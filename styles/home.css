@@ -92,3 +92,25 @@
     padding: 10% 5%;
     border-bottom: 1px solid #fff;
 }
+
+#projects-list {
+    display: inline-block;
+    margin-top: 5%;
+    width: 100%;
+}
+
+@media (max-width: 400px) {
+    #sideMenu {
+        width: 30%;
+    }
+    .board-container {
+        width: 65%;
+    }
+    .card,
+    .board-input {
+        width: 100%;
+    }
+    .add-board-btn {
+        float: left;
+    }
+}
