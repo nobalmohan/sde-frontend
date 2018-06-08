@@ -29,6 +29,7 @@ form {
 input {
     padding: 10px;
     outline: none;
+    border: 1px solid #ccc;
 }
 
 .label-text {
