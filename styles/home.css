@@ -35,18 +35,16 @@
     border-radius: 5px;
 }
 
-.board-name {
+.board-block {
     font-size: 22px;
     font-weight: bolder;
     color: #000;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .board-input {
     padding: 10px;
     width: 80%;
+    border: 1px solid #ccc;
 }
 
 .remove-board {
@@ -54,6 +52,7 @@
     color: #fff;
     font-size: 12px;
     padding: 8px;
+    float: right;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -92,6 +91,9 @@
     cursor: pointer;
     padding: 10% 5%;
     border-bottom: 1px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #projects-list {
@@ -111,7 +113,17 @@
     .board-input {
         width: 100%;
     }
+    .board-input {
+        margin: 5% 0;
+    }
     .add-board-btn {
         float: left;
+    }
+    .board-name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 50%;
+        display: inline-block;
     }
 }

@@ -77,9 +77,9 @@ function showProjects(showBroadID) {
       projectBlock.innerHTML +=
         "<div class='board-block' id='" +
         BID +
-        "' ><div class='board-name'>" +
+        "' ><div class='board-block'><span class='board-name'>" +
         value.name +
-        "<span class='remove-board' onclick='removeBoard(" +
+        "</span><span class='remove-board' onclick='removeBoard(" +
         BID +
         ")'>Remove Board</span></div><div class='card-container' id='" +
         PID +
@@ -136,6 +136,7 @@ function newBoard(element) {
     });
     showProjects(newBoardId);
     loadMenuList();
+    document.getElementById('boardName').value = '';
     alert("Board name " + element.value + " added!");
   }
 }
