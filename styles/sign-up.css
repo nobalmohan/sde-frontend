@@ -3,8 +3,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    min-height: 100vh;
-    min-width: 100vw;
     color: #333;
     align-items: center;
     justify-content: center;
@@ -12,9 +10,15 @@ body {
 
 .container {
     display: flex;
-    width: 400px;
+    width: 80%;
     flex-direction: column;
     justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 30%;
+    }
 }
 
 form {
@@ -28,8 +32,8 @@ input {
 }
 
 .label-text {
-   font-weight: bold;
-   margin: 10px 0;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 a {
